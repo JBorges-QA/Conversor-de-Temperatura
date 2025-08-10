@@ -1,28 +1,28 @@
-https://img.shields.io/github/go-mod/go-version/seu-usuario/conversor-temperatura
-https://img.shields.io/github/license/seu-usuario/conversor-temperatura
+# Conversor de Temperaturas em Go
 
-Um conversor de temperaturas eficiente e preciso escrito em Go, que permite conversões entre as escalas Celsius, Fahrenheit e Kelvin através da linha de comando.
+![Go Version](https://img.shields.io/badge/go-1.16+-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-📦 Instalação
-Pré-requisitos
-Go 1.16+ instalado
+Um conversor de temperaturas CLI eficiente escrito em Go que realiza conversões precisas entre Celsius, Fahrenheit e Kelvin.
 
-Ambiente configurado para desenvolvimento Go
+## 📦 Instalação
 
-Instalação via GitHub
-bash
+### Via go install
+```bash
 go install github.com/seu-usuario/conversor-temperatura@latest
 Compilação manual
 bash
 git clone https://github.com/seu-usuario/conversor-temperatura.git
 cd conversor-temperatura
 go build -o conversor-temp
+```
 🚀 Como Usar
 Sintaxe básica
-bash
+```bash
 ./conversor-temp -valor <temperatura> -de <unidade_origem> -para <unidade_destino>
+```
 Exemplos
-bash
+```bash
 # Converter 100°C para Fahrenheit
 ./conversor-temp -valor 100 -de C -para F
 
@@ -31,47 +31,24 @@ bash
 
 # Converter 273.15K para Celsius
 ./conversor-temp -valor 273.15 -de K -para C
-Opções disponíveis
-Flag	Descrição	Valores aceitos	Padrão
--valor	Valor da temperatura a converter	Número real	0
--de	Unidade de origem	C, F, K	C
--para	Unidade de destino	C, F, K	F
--h	Mostrar ajuda	-	-
+```
+Opções
+
+| Flag      | Descrição                          | Valores Aceitos | Padrão |
+|-----------|------------------------------------|-----------------|--------|
+| `-valor`  | Valor da temperatura a converter   | Número real     | 0      |
+| `-de`     | Unidade de origem                  | C, F, K         | C      |
+| `-para`   | Unidade de destino                 | C, F, K         | F      |
+| `-h`      | Mostrar ajuda                      | -               | -      |
+
 📊 Conversões Suportadas
-De/Para	Celsius (°C)	Fahrenheit (°F)	Kelvin (K)
-Celsius	-	✅	✅
-Fahrenheit	✅	-	✅
-Kelvin	✅	✅	-
-🛠️ Desenvolvimento
-Estrutura do Código
-text
-.
-├── main.go          # Implementação principal
-├── go.mod           # Arquivo de módulo Go
-├── LICENSE          # Licença do projeto
-└── README.md        # Este arquivo
-Testes
-O projeto inclui testes unitários para garantir a precisão das conversões:
+| De/Para   | Celsius (°C) | Fahrenheit (°F) | Kelvin (K) |
+|-----------|--------------|-----------------|------------|
+| **Celsius** | -            | ✅               | ✅          |
+| **Fahrenheit** | ✅          | -               | ✅          |
+| **Kelvin** | ✅           | ✅               | -          |
 
-bash
-go test -v
-Contribuição
-Contribuições são bem-vindas! Siga estes passos:
-
-Faça um fork do projeto
-
-Crie sua branch (git checkout -b feature/nova-funcionalidade)
-
-Commit suas mudanças (git commit -m 'Adiciona nova funcionalidade')
-
-Push para a branch (git push origin feature/nova-funcionalidade)
-
-Abra um Pull Request
-
-📝 Licença
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
-
-✉️ Contato
-Seu Nome - @seu_twitter - seu.email@example.com
-
-Link do Projeto: https://github.com/seu-usuario/conversor-temperatura
+Build
+```bash
+go build -o conversor-temp
+```
